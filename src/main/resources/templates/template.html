@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+    <form method="post" action="#" th:action="@{/getsession}">
+        <button type="submit">获取session</button>
+    </form>
+    <hr/>
+    <!--th:href="@{/getrequest(request_msg=${xxx})}"-->
+    <a href="#" th:href="@{/getrequest(request_msg='1')}">获得request</a>
+    <hr/>
+    <label>存在判断</label>
+    <a href="#" th:href="@{/getifnull}">存在</a>
+    <a href="#" th:href="@{/getifnull(ifnull='')}">不存在</a>
+    <hr/>
+    <a href="#" th:href="@{/getforeach}">循环</a>
+
+
+</div>
+
+
+</body>
+</html>

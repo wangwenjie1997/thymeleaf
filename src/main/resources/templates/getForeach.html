@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+userStat称作状态变量，属性有：<br/>
+index:当前迭代对象的迭代索引，从0开始，这是索引属性；<br/>
+count:当前迭代对象的迭代索引，从1开始，这个是统计属性；<br/>
+size:迭代变量元素的总量，这是被迭代对象的大小属性；<br/>
+current:当前迭代变量；<br/>
+even/odd:布尔值，当前循环是否是偶数/奇数（从0开始计算）；<br/>
+first:布尔值，当前循环是否是第一个；<br/>
+last:布尔值，当前循环是否是最后一个<br/>
+</div>
+<table>
+
+    <tr th:each="list,userStat:${lists}">
+        <td th:text="${userStat.index}"></td>
+        <td th:text="${userStat.count}"></td>
+        <td th:text="${list}"></td>
+    </tr>
+</table>
+</body>
+</html>
